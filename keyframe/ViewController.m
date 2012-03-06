@@ -112,7 +112,7 @@
     
     CGPoint destination = [path currentPoint];
     
-    // Strip off the rotation applied by `reset:`, because it interferes with `kCAAnimationRotateAuto`.
+    // Strip off the image's rotation, because it interferes with `kCAAnimationRotateAuto`.
     theImage.transform = CGAffineTransformMakeScale(_currentScale, _currentScale);
     
     [UIView animateWithDuration:3 animations:^{
@@ -122,6 +122,7 @@
         positionAnimation.path = path.CGPath;
         positionAnimation.rotationMode = kCAAnimationRotateAuto;
         
+        positionAnimation.removedOnCompletion = NO;
         [CATransaction setCompletionBlock:^{
             CGAffineTransform finalTransform = [theImage.layer.presentationLayer affineTransform];
             [theImage.layer removeAnimationForKey:positionAnimation.keyPath];
@@ -133,10 +134,9 @@
         theImage.center = destination;
         
         // Copy properties from UIView's animation.
-        CAAnimation *autoAnimation = [theImage.layer animationForKey:@"position"];
+        CAAnimation *autoAnimation = [theImage.layer animationForKey:positionAnimation.keyPath];
         positionAnimation.duration = autoAnimation.duration;
         positionAnimation.fillMode = autoAnimation.fillMode;
-        positionAnimation.removedOnCompletion = NO;
         
         // Replace UIView's animation with my animation.
         [theImage.layer addAnimation:positionAnimation forKey:positionAnimation.keyPath];
