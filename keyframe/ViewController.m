@@ -108,7 +108,7 @@
     UIImageView* theImage = self.imageView;
     
     UIBezierPath *path = _isReset ? _path0 : _path1;
-    CGFloat newScale = _currentScale;
+    CGFloat newScale = 3 - _currentScale;
     
     CGPoint destination = [path currentPoint];
     
