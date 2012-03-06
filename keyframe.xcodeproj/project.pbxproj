@@ -34,8 +34,9 @@
 		31DC69581502ABD000E6E37C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		31DC695B1502ABD000E6E37C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
 		31DC69641502AC4200E6E37C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		31FF05681505FEA800904E96 /* startRadiansForPath.h */ = {isa = PBXFileReference; fileEncoding = 4; path = startRadiansForPath.h; sourceTree = "<group>"; };
+		31FF05681505FEA800904E96 /* startRadiansForPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = startRadiansForPath.h; sourceTree = "<group>"; };
 		31FF05691505FEA800904E96 /* startRadiansForPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = startRadiansForPath.m; sourceTree = "<group>"; };
+		31FF05701506044B00904E96 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +57,7 @@
 		31DC69361502ABD000E6E37C = {
 			isa = PBXGroup;
 			children = (
+				31FF05701506044B00904E96 /* README.md */,
 				31DC694B1502ABD000E6E37C /* keyframe */,
 				31DC69441502ABD000E6E37C /* Frameworks */,
 				31DC69421502ABD000E6E37C /* Products */,
